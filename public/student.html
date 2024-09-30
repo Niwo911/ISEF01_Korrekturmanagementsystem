@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentenseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Willkommen, Student!</h1>
+        <button id="logout">Logout</button>
+    </header>
+
+    <section id="buttons">
+        <button id="newTicketBtn">Neues Ticket erstellen</button>
+        <button id="viewTicketsBtn">Meine Tickets</button>
+    </section>
+
+    <section id="ticketCreation" style="display: none;">
+        <h2>Neues Ticket erstellen</h2>
+        <form id="submitTicketForm">
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date" required readonly>
+          
+            <label for="kursID">KursID:</label>
+            <input type="text" id="kursID" name="kursID" required>
+
+            <label for="title">Titel:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="mediaType">Medienart:</label>
+            <select id="mediaType" name="mediaType" required>
+                <option value="Skript">Skript</option>
+                <option value="Vodcast">Vodcast</option>
+                <option value="Online Fragen">Online Fragen</option>
+                <option value="Online Videos">Online Videos</option>
+                <option value="Podcast">Podcast</option>
+                <option value="Sonstige">Sonstige</option>
+            </select>
+
+            <label for="description">Beschreibung:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="exactLocation">Genaue Position z.B. Seitenzahl oder Zeitstempel:</label>
+            <input type="text" id="exactLocation" name="exactLocation" required>
+
+            <label for="priority">Priorität:</label>
+            <select id="priority" name="priority" required>
+                <option value="low">Niedrig</option>
+                <option value="medium">Mittel</option>
+                <option value="high">Hoch</option>
+            </select>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="name">Name, Vorname:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="course">Studiengang:</label>
+            <input type="text" id="course" name="course" required>
+
+            <label for="matriculation">Matrikelnummer:</label>
+            <input type="text" id="matriculation" name="matriculation" required>
+
+            <button type="submit">Ticket abschicken</button>
+        </form>
+    </section>
+
+    <section id="viewTickets" style="display: none;">
+        <h2>Meine Tickets</h2>
+        <ul id="ticketList"></ul>
+    </section>
+
+    <script>
+        document.getElementById('date').value = new Date().toISOString().split('T')[0];
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header-Stile */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Section-Stile */
+section {
+    margin: 30px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button-Container für Studentenseite und Agentenseite */
+#buttons, #agentNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+
+button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box; 
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+
+#buttons button, #agentNav button {
+    flex: 1 1 0; 
+    min-width: 150px; 
+}
+
+
+#viewTicketsBtn {
+    margin-top: 20px;
+}
+
+/* Formularelemente Stile */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+select {
+    height: 40px;
+}
+
+/* Ticket-Liste Stile */
+#ticketList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ticketList li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+#ticketList li:hover {
+    background-color: #f1f1f1;
+}
+
+#ticketList li div {
+    margin-top: 15px;
+}
+
+#ticketList li strong {
+    font-size: 20px;
+    color: #333;
+}
+
+#ticketList ul {
+    padding-left: 25px;
+}
+
+#ticketList ul li {
+    padding: 6px 0 6px 15px;
+    border-left: 3px solid #333;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+#ticketList ul li span {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Such- und Filterbereich Stile */
+#ticketFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-bottom: 25px;
+}
+
+#ticketFilters input, #ticketFilters select, #ticketFilters button {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#ticketFilters button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+#ticketFilters button:hover {
+    background-color: #218838;
+}
+
+/* Aktionsbuttons-Stile */
+.action-buttons-container {
+    margin-top: 15px; 
+}
+
+.action-button {
+    margin-right: 10px; 
+}
+
+.action-button:last-child {
+    margin-right: 0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #ticketFilters {
+        flex-direction: column;
+    }
+
+    #buttons, #agentNav {
+        flex-direction: column;
+    }
+
+    button, #ticketFilters input, #ticketFilters select, #ticketFilters button {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+}

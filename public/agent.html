@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentenseite</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Willkommen, Agent!</h1>
+        <button id="logout">Logout</button>
+    </header>
+
+    <nav id="agentNav">
+        <button id="viewTicketsBtn">Alle Tickets anzeigen</button>
+    </nav>
+
+    <main>
+        <section id="ticketManagement" style="display: none">
+            <h2>Alle Tickets verwalten</h2>
+            <div id="ticketFilters">
+                <input type="text" id="searchTickets" placeholder="Nach Titel suchen..." />
+                <select id="filterStatus">
+                    <option value="">Alle Status</option>
+                    <option value="erfasst">Erfasst</option>
+                    <option value="in Bearbeitung">In Bearbeitung</option>
+                    <option value="abgeschlossen">Abgeschlossen</option>
+                </select>
+                <button id="applyFilters">Filter anwenden</button>
+            </div>
+            <ul id="ticketList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
