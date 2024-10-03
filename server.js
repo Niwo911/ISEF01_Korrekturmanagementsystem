@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const mongoURI = 'mongodb+srv://niklaswolter:hallo1234@ticketsystem.6z8bb.mongodb.net/?retryWrites=true&w=majority&appname=ticketsystem';
+const mongoURI = 'mongodb+srv://niklaswolter:Name+Passwort der Datenbank, zur Sicherheit hier rausgenommen auf GitHub';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB verbunden!'))
     .catch(err => console.log('Fehler bei der MongoDB-Verbindung:', err));
